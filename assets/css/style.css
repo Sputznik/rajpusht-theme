@@ -12,3 +12,29 @@
   border-radius: 4px 4px 4px 4px;
   }
 #rp-single-post .post-tags a:hover{ background-color: #c25b56; color: #fff; }
+#rp-single-post .under{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 1px;
+  display: inline-block;
+  border-top: 1px solid #999999;
+  width: 100%;
+  max-width: 100%;
+}
+#rp-single-post .post-tags a:before {
+    font-family: "FontAwesome";
+    content: "\f02c";
+    display: inline-block;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 20px;
+}
+#rp-single-post .tag-headline{
+    font-size:16px;
+    font-weight: 600;
+    color:#3a3a3a;
+}
+#rp-single-post .entry-summary{
+  margin-bottom: 20px;
+}
