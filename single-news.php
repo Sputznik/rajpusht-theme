@@ -6,7 +6,7 @@
       <article <?php post_class();?>>
         <header class="entry-header"><h1 class="entry-title"><?php the_title();?></h1></header>
         <div class="entry-summary"><?php _e( do_shortcode( '[orbit_excerpt]' ) );?></div>
-        <p>Published by <?php _e( do_shortcode( '[orbit_cf id="publisher"]' ) ); echo ' on '.get_the_date('M j, Y');?></strong></p>
+        <p>Reported in <?php _e( do_shortcode( '[orbit_cf id="publisher"]' ) ); echo ' on '.get_the_date('M j, Y');?></strong></p>
         <div class="post-thumbnail"><?php _e( do_shortcode( '[orbit_thumbnail size="full"]' ) );?></div>
         <div class="entry-content"><?php the_content(); ?></div>
         <div class="under"></div>

@@ -37,4 +37,9 @@
 }
 #rp-single-post .entry-summary{
   margin-bottom: 20px;
+  font-size: 20px;
+}
+#rp-single-post .author-date{
+  color:#c25b56;
+  font-weight:bold;
 }
