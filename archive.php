@@ -11,7 +11,7 @@
       <ul class='orbit-three-grid' style='margin-bottom:50px; padding-left: 0;'>
         <?php while (have_posts()) : the_post(); ?>
         <li class="orbit-article-db orbit-list-db">
-          <?php get_template_part('Partials/post', 'common');?>
+          <?php get_template_part('partial/post', 'common');?>
         </li>
         <?php endwhile; ?>
       </ul>
