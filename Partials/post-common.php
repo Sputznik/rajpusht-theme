@@ -1,5 +1,6 @@
 <?php
 	global $post;
+	$reported = get_post_meta( get_the_ID(), 'publisher', true );
 	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' );
 	$img_class = "orbit-thumbnail-bg";
 
@@ -17,9 +18,6 @@
 	<p>By <?php the_author();?> on <?php the_time( 'F jS Y' );?></p>
 	<div class='orbit-excerpt'><?php the_excerpt();?></div>
 </div>
-<?php
-  $reported = get_post_meta( get_the_ID(), 'publisher', true );
-?>
 <?php if( $reported ): ?>
 	<p>Reported in <? _e( $reported ); ?></p>
 <?php endif;?>
