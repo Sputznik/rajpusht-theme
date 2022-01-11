@@ -4,8 +4,9 @@
   <div class="row">
     <div class='col-sm-12'>
       <h1 class="text-center" style="text-transform: capitalize;">
-        <?php _e( $term->name );?>
+        Tagged Under: <?php _e( $term->name );?>
       </h1>
+
       <br>
       <?php if (have_posts()) : ?>
       <ul class='orbit-three-grid' style='margin-bottom:50px; padding-left: 0;'>

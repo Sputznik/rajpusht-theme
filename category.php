@@ -1,11 +1,14 @@
 <?php get_header();?>
-<?php $term = $wp_query->get_queried_object();?>
+<?php $category = get_queried_object();?>
 <div class="container" style="margin-top: 80px;">
   <div class="row">
     <div class='col-sm-12'>
       <h1 class="text-center" style="text-transform: capitalize;">
-        <?php _e( $term->name );?>
+        <?php _e( $category->name );?>
       </h1>
+
+          <div class="page-description"><?php _e($category->category_description); ?></div>
+
       <br>
       <?php if (have_posts()) : ?>
       <ul class='orbit-three-grid' style='margin-bottom:50px; padding-left: 0;'>

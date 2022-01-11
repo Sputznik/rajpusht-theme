@@ -15,6 +15,25 @@
       </article>
       <?php endwhile; endif; ?>
     </div>
+
+    <!-- RELATED POSTS -->
+<?php
+  $post_tag = get_the_tags( $post->ID );
+  $tags_str = implode( ',', wp_list_pluck( $post_tag, 'slug' ) );
+  $shortcode_str = do_shortcode('[orbit_query post_type="post" tag="'. $tags_str .'"  style="card" posts_per_page="3" post__not_in="'. $post->ID .'"]');
+  if( $post_tag && strlen( $shortcode_str ) > 0 ):
+?>
+  <div class="container similar-content">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="title text-center">Related Posts</h2>
+        <?php echo $shortcode_str;?>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
+<!-- RELATED POSTS -->
+
   </div>
 </div>
 <?php get_footer();?>
